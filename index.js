@@ -1,6 +1,8 @@
 var xhr = require('xhr')
 var example = require('./views/example.hbs')
 
+/*var input = document.getElementById('form');
+input.addEventListener('', function)*/
 
 var button = document.getElementById("displayButton");
 button.addEventListener("click", function(){
@@ -9,7 +11,8 @@ button.addEventListener("click", function(){
     var usefulData = JSON.parse(data.body)
     console.log('this is usefulData.cats[0].name: ', usefulData.cats[0].name);
     console.log('this is usefulData: ', usefulData);
-    document.body.innerHTML = example({ name: usefulData.cats[0].name});
+    console.log('this is name', name)
+    document.body.innerHTML = example({ name: usefulData.cats[1].name});
   })
 })
 
